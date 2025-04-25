@@ -1,11 +1,36 @@
-:root {
-    --primary-color: white;
+@import "https://www.nerdfonts.com/assets/css/webfont.css";
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+.open-sans {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
 }
 
-* {
-    font-family: Arial, Helvetica, sans-serif;
+:root {
+    --primary-color: white;
+    --roundness: 6px;
+}
 
-    transition: all ease 0.5s;
+
+* {
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+button {
+    color: var(--textColor);
+    text-decoration: none;
+    height: auto;
+    border: 1px solid var(--lineColor);
+    width: 100%;
+
+    padding: 4px;
+    
+    border-radius: 5px;
+
+    margin-top: 7.5px;
 }
 
 button:hover {
@@ -31,7 +56,7 @@ body {
 kbd {
     border: solid 1px darkgray;
     padding: 2.5px;
-    border-radius: 5px;
+    border-radius: var(--roundness);
     box-shadow: 0px 2.5px gray;
     user-select: none;
     font-weight: bold;
@@ -54,7 +79,7 @@ span.nav-button-container {
 a.navButton {
     margin: 10px;
     background-color: var(--selectedBgColor);
-    border-radius: 5px;
+    border-radius: var(--roundness);
     padding: 2rem;
     width: 9.5rem;
     text-decoration: none;
@@ -65,17 +90,15 @@ a.navButton {
 }
 
 a.navButton.previousPageBtn::before {
-    content: '< ';
+    content: '⭠ ';
 }
 
 a.navButton.nextPageBtn::after {
-    content: ' >';
+    content: ' ⭢';
 }
 
 a.navButton:hover {
-    box-shadow: 0px 0px 15px var(--lineColor);
-    text-shadow: 0px 0px 2.5px var(--textColor);
-    padding: 2.5rem;
+    filter: brightness(1.1);
 }
 
 @media only screen and (max-width: 600px) {

@@ -168,7 +168,7 @@ async function setup() {
         }
         setTimeout(() => {
             for(const el of document.querySelectorAll('*')) {
-                el.style.transition = 'all ease 0.5s'
+                el.style.transition = 'all ease 0.1s'
             }
         }, 500);
     }
@@ -244,7 +244,7 @@ async function setup() {
         if(Object.keys(currentPage).length > 0) {
             content.innerHTML = `
                 ${content.innerHTML}<br>
-                <a class="gh-edit-link" href="${config['gh-repository']}/blob/main/${docPath}${currentPage.file}">${await fileExists('assets/pen.svg') ? (await readFile('assets/pen.svg')).concat(' ') : ''}Edit this page</a>
+                <a class="gh-edit-link" href="${config['gh-repository']}/blob/main/${docPath}${currentPage.file}"><i class="nf nf-md-text_box_edit_outline"></i> Edit this page</a>
             `
         }
     }

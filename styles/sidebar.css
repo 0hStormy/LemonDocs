@@ -1,3 +1,5 @@
+@import url("https://www.nerdfonts.com/assets/css/webfont.css");
+
 :root {
     --bgColor: white;
     --textColor: black;
@@ -44,7 +46,7 @@
     color: var(--textColor);
     text-decoration: none;
     height: auto;
-    border-bottom: 1px solid var(--lineColor);
+    border: 1px solid var(--lineColor);
 
     padding: 4px;
     
@@ -96,7 +98,7 @@
 }
 
 #sidebar .selected::after {
-    content: ' <';
+    content: ' ⏴';
 }
 
 @media only screen and (max-width: 600px) {
